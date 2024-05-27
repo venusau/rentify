@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Details - Rentify</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Rentify</h1>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/logout" onclick="logout()">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section id="propertyDetail">
+        <div class="container">
+            <h1 id="propertyTitle">Property Title</h1>
+            <p id="propertyDescription">Property Description</p>
+            <ul>
+                <li>Place: <span id="propertyPlace"></span></li>
+                <li>Area: <span id="propertyArea"></span> sq ft</li>
+                <li>Bedrooms: <span id="propertyBedrooms"></span></li>
+                <li>Bathrooms: <span id="propertyBathrooms"></span></li>
+                <li>Hospitals Nearby: <span id="propertyHospitalsNearby"></span></li>
+                <li>Colleges Nearby: <span id="propertyCollegesNearby"></span></li>
+            </ul>
+            <button onclick="likeProperty()">Like</button> <span id="propertyLikes">0</span> Likes
+            <button onclick="showSellerDetails()">I'm Interested</button>
+            <div id="sellerDetails" style="display:none;">
+                <h2>Seller Details</h2>
+                <p>Email: <span id="sellerEmail"></span></p>
+                <p>Phone: <span id="sellerPhone"></span></p>
+            </div>
+        </div>
+    </section>
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seller Dashboard - Rentify</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Rentify</h1>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/logout" onclick="logout()">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section id="dashboard">
+        <div class="container">
+            <h1>Seller Dashboard</h1>
+            <form id="propertyForm">
+                <h2>Post a New Property</h2>
+                <label for="title">Title:</label>
+                <input type="text" id="title" required>
+                <label for="description">Description:</label>
+                <textarea id="description" required></textarea>
+                <label for="place">Place:</label>
+                <input type="text" id="place" required>
+                <label for="area">Area (sq ft):</label>
+                <input type="number" id="area" required>
+                <label for="bedrooms">Bedrooms:</label>
+                <input type="number" id="bedrooms" required>
+                <label for="bathrooms">Bathrooms:</label>
+                <input type="number" id="bathrooms" required>
+                <label for="hospitals_nearby">Hospitals Nearby:</label>
+                <input type="text" id="hospitals_nearby">
+                <label for="colleges_nearby">Colleges Nearby:</label>
+                <input type="text" id="colleges_nearby">
+                <button type="submit">Post Property</button>
+            </form>
+            <h2>Your Properties</h2>
+            <div id="propertiesList">
+                <!-- Seller's properties will be listed here -->
+            </div>
+        </div>
+    </section>
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+</html>

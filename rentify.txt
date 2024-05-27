@@ -1,0 +1,26 @@
+rentify/
+│
+├── backend/
+│   ├── app.py
+│   ├── models.py
+│   ├── routes.py
+│   ├── utils.py
+│   └── templates/
+│       ├── index.html
+│       ├── login.html
+│       ├── register.html
+│       ├── seller_dashboard.html
+│       ├── buyer_dashboard.html
+│       └── property_detail.html
+│
+└── frontend/
+    ├── css/
+    │   └── styles.css
+    ├── js/
+    │   └── scripts.js
+    ├── index.html
+    ├── login.html
+    ├── register.html
+    ├── seller_dashboard.html
+    ├── buyer_dashboard.html
+    └── property_detail.html
