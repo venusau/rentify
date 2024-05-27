@@ -1,1 +1,1 @@
-web: pip install -r requirements.txt && cd project && python3 app.py
+web: pip install -r requirements.txt && cd project && python app.py

@@ -2,6 +2,7 @@ from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_cors import CORS
 from flask_login import LoginManager
+import os
 
 app = Flask(__name__)
 app.secret_key = 'your_secret_key_here'
@@ -28,5 +29,5 @@ with app.app_context():
     db.create_all()
 
 # Now you can run your application
-if __name__ == '__main__':
-    app.run(debug=True)
+if __name__ == "__main__":
+    app.run(host='0.0.0.0', port=os.environ.get('PORT', 5000))
